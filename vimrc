@@ -29,7 +29,7 @@
   let s:settings.enable_cursorcolumn = 0
   "let s:settings.colorscheme = 'jellybeans'
   let s:settings.colorscheme = 'solarized'
-  let s:settings.autocomplete_plugin = 'none'
+  let s:settings.autocomplete_plugin = 'deoplete'
   if g:nvim_settings.autocomplete != 0
     if s:is_neovim && has('python3')
       let s:settings.autocomplete_plugin = 'deoplete'
@@ -697,7 +697,7 @@
       let g:EasyGrepCommand = 1
       nnoremap <Leader>vo :GrepOptions<CR>
     "}}}
-    call dein#add('ctrlpvim/ctrlp.vim', {'depends': 'tacahiroy/ctrlp-funky', 'on_cmd': 'CtrlP'}) "{{{
+    call dein#add('kien/ctrlp.vim', {'on_cmd': 'CtrlP'}) "{{{
       let g:ctrlp_clear_cache_on_exit = 1
       let g:ctrlp_max_height = 40
       let g:ctrlp_show_hidden = 0
@@ -1127,6 +1127,8 @@
       nnoremap <Leader>d :ConqueGdbVSplit<CR>
     "}}}
     "call dein#add('edkolev/tmuxline.vim')
+    call dein#add('flazz/vim-colorschemes')
+    call dein#add('junegunn/vim-plug', {'on_cmd': ['PlugInstall']})
   endif "}}}
   if count(s:settings.plugin_groups, 'windows') "{{{
     call dein#add('PProvost/vim-ps1', {'on_ft': 'ps1'}) "{{{

@@ -52,7 +52,7 @@
 
   " user interface
   "let g:nvim_settings.colorscheme = 'molokai'
-  let g:nvim_settings.colorscheme = 'solarized'
+  " let g:nvim_settings.colorscheme = 'solarized'
   let g:nvim_settings.force256 = 0
   let g:nvim_settings.termtrans = 0
   let g:nvim_settings.powerline_fonts = 0
@@ -80,6 +80,7 @@
 " User interface settings
 
   set wildmode=full
+  colorscheme Tomorrow-Night-Eighties
 
   " color
   set t_Co=256
@@ -137,7 +138,7 @@
     endif
   catch
     set background=dark
-    colorscheme default
+    colorscheme Tomorrow-Night-Eighties
   endtry
 
   " minimum number of lines to scroll
@@ -146,6 +147,7 @@
   set scrolloff=10
   " minimum number of columns to left and right of cursor
   set sidescrolloff=5
+  nmap <leader><leader> :CtrlP<CR>
 
   " mouse
   "set mouse&
